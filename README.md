@@ -1,4 +1,4 @@
-# Custom RDBMS Implementation
+# James Nyamai RDBMS Implementation
 
 A fully functional in-memory relational database management system (RDBMS) built from scratch in TypeScript, with SQL-like query language support and an interactive REPL interface.
 
