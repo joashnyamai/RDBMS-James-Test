@@ -66,7 +66,7 @@ function App() {
           </div>
 
           {showInfo && (
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg shadow-lg p-6 mb-6">
+            <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg shadow-lg p-8 mb-8">
               <div className="flex justify-between items-start gap-8">
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-3">About James Nyamai RDBMS</h3>
