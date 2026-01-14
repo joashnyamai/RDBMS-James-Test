@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-        <div className={`container mx-auto px-4 py-8 max-w-7xl ${showInfo ? 'mt-56' : ''}`}>
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-3 bg-blue-600 rounded-lg">
@@ -66,66 +66,63 @@ function App() {
           </div>
 
           {showInfo && (
-            <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg">
-              <div className="container mx-auto px-4 py-6 max-w-7xl">
-                <div className="flex justify-between items-start gap-8">
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3">About James Nyamai RDBMS</h3>
-                    <p className="text-blue-100 mb-4 leading-relaxed">
-                      A fully functional in-memory relational database management system built from scratch in TypeScript. 
-                      Supports DDL, DML, constraints, indexing, and advanced querying.
-                    </p>
-                    <div className="grid md:grid-cols-2 gap-4 text-sm">
-                      <ul className="space-y-2 text-blue-50">
-                        <li className="flex items-center gap-2">
-                          <span className="text-blue-200 font-bold">✓</span>
-                          <span>Table creation with column types</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <span className="text-blue-200 font-bold">✓</span>
-                          <span>Primary keys & unique constraints</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <span className="text-blue-200 font-bold">✓</span>
-                          <span>Hash-based indexing for fast lookups</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <span className="text-blue-200 font-bold">✓</span>
-                          <span>Full CRUD operations</span>
-                        </li>
-                      </ul>
-                      <ul className="space-y-2 text-blue-50">
-                        <li className="flex items-center gap-2">
-                          <span className="text-blue-200 font-bold">✓</span>
-                          <span>WHERE clause filtering</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <span className="text-blue-200 font-bold">✓</span>
-                          <span>INNER and LEFT JOIN support</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <span className="text-blue-200 font-bold">✓</span>
-                          <span>SQL-like query language</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <span className="text-blue-200 font-bold">✓</span>
-                          <span>Interactive REPL console</span>
-                        </li>
-                      </ul>
-                    </div>
+            <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg shadow-lg p-6 mb-6">
+              <div className="flex justify-between items-start gap-8">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3">About James Nyamai RDBMS</h3>
+                  <p className="text-blue-100 mb-4 leading-relaxed">
+                    A fully functional in-memory relational database management system built from scratch in TypeScript. 
+                    Supports DDL, DML, constraints, indexing, and advanced querying.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 text-sm">
+                    <ul className="space-y-2 text-blue-50">
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-200 font-bold">✓</span>
+                        <span>Table creation with column types</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-200 font-bold">✓</span>
+                        <span>Primary keys & unique constraints</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-200 font-bold">✓</span>
+                        <span>Hash-based indexing for fast lookups</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-200 font-bold">✓</span>
+                        <span>Full CRUD operations</span>
+                      </li>
+                    </ul>
+                    <ul className="space-y-2 text-blue-50">
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-200 font-bold">✓</span>
+                        <span>WHERE clause filtering</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-200 font-bold">✓</span>
+                        <span>INNER and LEFT JOIN support</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-200 font-bold">✓</span>
+                        <span>SQL-like query language</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-200 font-bold">✓</span>
+                        <span>Interactive REPL console</span>
+                      </li>
+                    </ul>
                   </div>
-                  <button
-                    onClick={() => setShowInfo(false)}
-                    className="flex-shrink-0 text-blue-100 hover:text-white text-2xl font-bold transition-colors"
-                    title="Dismiss"
-                  >
-                    ✕
-                  </button>
                 </div>
+                <button
+                  onClick={() => setShowInfo(false)}
+                  className="flex-shrink-0 text-blue-100 hover:text-white text-2xl font-bold transition-colors"
+                  title="Dismiss"
+                >
+                  ✕
+                </button>
               </div>
             </div>
           )}
-          {showInfo && <div className="h-56"></div>}
         </div>
 
           <div className="grid lg:grid-cols-2 gap-6">
