@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { RDBMS, REPL } from './rdbms';
 import { SQLConsole } from './components/SQLConsole';
 import { BookManager } from './components/BookManager';
+import { Database } from 'lucide-react';
 
 const rdbms = new RDBMS();
 const repl = new REPL(rdbms);
@@ -53,11 +54,9 @@ function App() {
       <div className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <img 
-              src="https://i.postimg.cc/TPNRQRCP/image.png" 
-              alt="James Nyamai RDBMS Logo" 
-              className="w-12 h-12 rounded-lg"
-            />
+            <div className="p-3 bg-blue-600 rounded-lg">
+              <Database className="w-8 h-8 text-white" />
+            </div>
             <div>
               <h1 className="text-3xl font-bold text-slate-800">James Nyamai RDBMS</h1>
               <p className="text-slate-600">
