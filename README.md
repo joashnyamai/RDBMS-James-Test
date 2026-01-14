@@ -2,6 +2,12 @@
 
 A fully functional in-memory relational database management system (RDBMS) built from scratch in TypeScript, with SQL-like query language support and an interactive REPL interface.
 
+**Live Demo:** https://rdbms-james.netlify.app
+
+## Screenshot
+
+![James Nyamai RDBMS Demo](./screenshot.png)
+
 ## Features
 
 ### Core Functionality
