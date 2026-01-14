@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      <div className="container mx-auto px-4 py-8 max-w-7xl">
+        <div className={`container mx-auto px-4 py-8 max-w-7xl ${showInfo ? 'mt-56' : ''}`}>
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-3 bg-blue-600 rounded-lg">
@@ -66,34 +66,66 @@ function App() {
           </div>
 
           {showInfo && (
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-              <div className="flex justify-between items-start">
-                <div className="flex-1">
-                  <h3 className="font-semibold text-blue-900 mb-2">About this RDBMS</h3>
-                  <p className="text-sm text-blue-800 mb-2">
-                    This is a fully functional in-memory relational database management system
-                    implemented in TypeScript with the following features:
-                  </p>
-                  <ul className="text-sm text-blue-800 space-y-1 ml-4">
-                    <li>• Table creation with column types (string, number, boolean)</li>
-                    <li>• Primary keys and unique constraints</li>
-                    <li>• Basic indexing for fast lookups</li>
-                    <li>• CRUD operations (INSERT, SELECT, UPDATE, DELETE)</li>
-                    <li>• WHERE clause filtering with comparison operators</li>
-                    <li>• INNER and LEFT JOIN support</li>
-                    <li>• SQL-like query language with a custom parser</li>
-                    <li>• Interactive REPL console</li>
-                  </ul>
+            <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg">
+              <div className="container mx-auto px-4 py-6 max-w-7xl">
+                <div className="flex justify-between items-start gap-8">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-3">About James Nyamai RDBMS</h3>
+                    <p className="text-blue-100 mb-4 leading-relaxed">
+                      A fully functional in-memory relational database management system built from scratch in TypeScript. 
+                      Supports DDL, DML, constraints, indexing, and advanced querying.
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-4 text-sm">
+                      <ul className="space-y-2 text-blue-50">
+                        <li className="flex items-center gap-2">
+                          <span className="text-blue-200 font-bold">✓</span>
+                          <span>Table creation with column types</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <span className="text-blue-200 font-bold">✓</span>
+                          <span>Primary keys & unique constraints</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <span className="text-blue-200 font-bold">✓</span>
+                          <span>Hash-based indexing for fast lookups</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <span className="text-blue-200 font-bold">✓</span>
+                          <span>Full CRUD operations</span>
+                        </li>
+                      </ul>
+                      <ul className="space-y-2 text-blue-50">
+                        <li className="flex items-center gap-2">
+                          <span className="text-blue-200 font-bold">✓</span>
+                          <span>WHERE clause filtering</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <span className="text-blue-200 font-bold">✓</span>
+                          <span>INNER and LEFT JOIN support</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <span className="text-blue-200 font-bold">✓</span>
+                          <span>SQL-like query language</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <span className="text-blue-200 font-bold">✓</span>
+                          <span>Interactive REPL console</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setShowInfo(false)}
+                    className="flex-shrink-0 text-blue-100 hover:text-white text-2xl font-bold transition-colors"
+                    title="Dismiss"
+                  >
+                    ✕
+                  </button>
                 </div>
-                <button
-                  onClick={() => setShowInfo(false)}
-                  className="text-blue-600 hover:text-blue-800 text-sm font-medium"
-                >
-                  Dismiss
-                </button>
               </div>
             </div>
           )}
+          {showInfo && <div className="h-56"></div>}
         </div>
 
           <div className="grid lg:grid-cols-2 gap-6">
